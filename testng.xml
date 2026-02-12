@@ -1,0 +1,10 @@
+<suite name="DemoWebShop Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test name="E2E Purchase Test">
+        <classes>
+            <class name="com.demowebshop.tests.E2EPurchaseTest" />
+        </classes>
+    </test>
+</suite>
