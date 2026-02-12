@@ -9,7 +9,8 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-q
+
+
 public class E2EPurchaseTest extends BaseTest {
     private String selectedProductName;
     private static final Logger logger =
