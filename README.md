@@ -1,6 +1,6 @@
 # Demo Web Shop – End-to-End Automation Framework
 
-## 📖 Overview
+## Overview
 
 This repository contains a production-style End-to-End automation framework built using:
 
@@ -20,7 +20,7 @@ It follows the **Page Object Model (POM)** design pattern with emphasis on modul
 
 ---
 
-## 🏗 Framework Architecture
+## Framework Architecture
 
 The framework is structured with clear separation of concerns:
 
@@ -42,7 +42,7 @@ This design ensures:
 
 ---
 
-## 🧪 Automated Test Scenario
+## Automated Test Scenario
 
 The implemented E2E flow includes:
 
@@ -55,7 +55,7 @@ The implemented E2E flow includes:
 - Checkout process (billing, shipping, payment)
 - Order confirmation validation
 
-### Strategic Assertions
+## Strategic Assertions
 
 Assertions are placed at:
 
@@ -66,14 +66,14 @@ Assertions are placed at:
 
 ---
 
-## ⚙ Configuration Management
+## Configuration Management
 
 Runtime configuration is externalized in:
 
 src/main/resources/config.properties
 
 
-### Supported Configuration Keys
+## Supported Configuration Keys
 
 - `baseURL`
 - `browser`
@@ -81,7 +81,7 @@ src/main/resources/config.properties
 - `password`
 - `timeout`
 
-### Example Configuration
+## Example Configuration
 
 baseURL=https://demowebshop.tricentis.com
 browser=chrome
@@ -94,7 +94,7 @@ This allows environment-level changes without modifying code and supports browse
 
 ---
 
-## 📊 Logging
+## Logging
 
 Log4j2 is integrated for structured logging.
 
@@ -109,18 +109,18 @@ This improves debuggability and execution trace validation.
 
 ---
 
-## 📈 Reporting
+## Reporting
 
 Allure reporting is integrated at framework level.
 
-### Features
+## Features
 
 - Automatic result generation
 - Failure screenshot attachment
 - Execution summary & step traceability
 - Status distribution & diagnostics
 
-### Generate Allure Report
+## Generate Allure Report
 
 mvn clean test
 allure serve allure-results
@@ -133,20 +133,20 @@ Allure results are generated inside:
 
 ---
 
-## 🚀 Test Execution
+## Test Execution
 
-### Prerequisites
+## Prerequisites
 
 - Java 21+
 - Maven 3.8+
 - Allure CLI installed
 
-### Run Entire Test Suite
+## Run Entire Test Suite
 
 mvn clean test
 
 
-### Run Specific TestNG Suite
+## Run Specific TestNG Suite
 
 mvn clean test -DsuiteXmlFile=testng.xml
 
@@ -157,7 +157,7 @@ mvn clean test -DsuiteXmlFile=testng.xml
 GenAI tools were used to accelerate architecture validation, and reporting integration refinement.  
 All architectural decisions, structuring, and implementation logic were reviewed and aligned with automation best practices.
 
-### Example Prompts Used
+## Example Prompts Used
 
 - Design a scalable Selenium TestNG framework using POM.
 - Integrate Allure reporting with TestNG including screenshot attachment.
@@ -165,7 +165,7 @@ All architectural decisions, structuring, and implementation logic were reviewed
 - Suggest modular orchestration for E2E checkout flow.
 - Externalize configuration using properties file.
 
-### Tools Leveraged
+## Tools Leveraged
 
 - ChatGPT (architecture refinement & reporting integration)
 - GitHub Copilot (IDE-level scaffolding assistance)
