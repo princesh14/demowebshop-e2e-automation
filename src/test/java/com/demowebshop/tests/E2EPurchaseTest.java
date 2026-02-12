@@ -27,7 +27,7 @@ public class E2EPurchaseTest extends BaseTest {
             dataProvider = "checkoutData",
             dataProviderClass = CheckoutDataProvider.class
     )
-    public void completePurchaseFlow(String firstName, String lastName, String country, String city, String address, String zip, String phone) {
+    public void completePurchaseFlow(String firstName, String lastName, String country, String city, String address, String zip, String phone) throws InterruptedException {
 
         logger.info("-E2E PURCHASE FLOW STARTED-");
         login();
@@ -94,7 +94,7 @@ public class E2EPurchaseTest extends BaseTest {
                 "Product not added to cart successfully"
         );
 
-        productDetails.closeNotification();
+        productDetails.closeNotificationAndWait();
         logger.info("Product Added Successfully");
 
     }
@@ -103,13 +103,12 @@ public class E2EPurchaseTest extends BaseTest {
     // STEP 3: VERIFY CART ITEM
 
     @Step("Verify product in cart")
-    private void verifyCartProduct() {
+    private void verifyCartProduct() throws InterruptedException {
 
         logger.info("Step 3: Verifying Product in Cart");
 
         CartPage cartPage =
                 new CartPage(driver, config.getTimeout());
-
         cartPage.clickShoppingCart();
 
         String productInCart = cartPage.getProductNameInCart();

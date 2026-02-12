@@ -23,7 +23,7 @@ public class CartPage {
     }
 
     public void clickShoppingCart() {
-        wait.waitForElementClickable(shoppingCart).click();
+        wait.waitForElementVisible(shoppingCart).click();
     }
 
     public void selectCountry(String india) {

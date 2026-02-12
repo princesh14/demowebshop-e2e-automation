@@ -13,6 +13,7 @@ public class ProductDetailsPage {
     private final By thirdProductName = By.xpath("//h1[@itemprop='name']");
     private final By addToCart = By.xpath("//input[@id ='add-to-cart-button-74']");
     private final By successNotification = By.xpath("//p[@class='content']");
+    private final By notificationBar = By.xpath("//div[@id='bar-notification']");
     private final By closeNotification = By.xpath("//span[@title='Close']");
 
     public ProductDetailsPage(WebDriver driver, int timeout) {
@@ -31,8 +32,9 @@ public class ProductDetailsPage {
         return wait.waitForElementVisible(successNotification).isDisplayed();
     }
 
-    public void closeNotification() {
-        wait.waitForElementVisible(closeNotification).click();
+    public void closeNotificationAndWait() {
+        wait.waitForElementClickable(closeNotification).click();
+        wait.waitForElementInvisible(notificationBar);
     }
 
 }
