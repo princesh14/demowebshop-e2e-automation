@@ -9,8 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-@Listeners()
+q
 public class E2EPurchaseTest extends BaseTest {
     private String selectedProductName;
     private static final Logger logger =
@@ -103,7 +102,7 @@ public class E2EPurchaseTest extends BaseTest {
     // STEP 3: VERIFY CART ITEM
 
     @Step("Verify product in cart")
-    private void verifyCartProduct() throws InterruptedException {
+    private void verifyCartProduct() {
 
         logger.info("Step 3: Verifying Product in Cart");
 
